@@ -12,6 +12,9 @@ namespace Datastructure_C_
         static void Main(string[] args)
         {
 
+            List<string> list2 = new List<string>() { "aya", "momen", "noor", "waleed", "faten", "shatha", "lemar" };
+            list2.ForEach(name => Console.Write(name + " "));
+            Console.WriteLine();
             //Lists using C# 
             List<int> list1 = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
