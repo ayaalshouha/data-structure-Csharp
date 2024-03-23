@@ -22,7 +22,7 @@ namespace Datastructure_C_
 
             Console.WriteLine();
 
-            //using labda expression
+            //using lambda expression
             list1.ForEach(number=>  Console.Write(number + " "));
 
             /*Console.WriteLine("list : " + string.Join(" ", list1));
