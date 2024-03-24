@@ -12,21 +12,31 @@ namespace Datastructure_C_
         static void Main(string[] args)
         {
 
-            List<string> list2 = new List<string>() { "aya", "momen", "noor", "waleed", "faten", "shatha", "lemar" };
-            list2.ForEach(name => Console.Write(name + " "));
-            Console.WriteLine();
             //Lists using C# 
             List<int> list1 = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            
+            //using lambda expression
+            list1.ForEach(number => Console.Write(number + " "));
+
+
+            Console.WriteLine("Even Numbers : " + string.Join(", ", list1.Where(n => n % 2 == 0)));
+            Console.WriteLine("Odd Numbers : " + string.Join(", ", list1.Where(n => n % 2 != 0)));
+            Console.WriteLine("Numbers Greater Than 5 : " + string.Join(", ", list1.Where(n => n > 5)));
+            Console.WriteLine("Numbers Between 3 and 8 : " + string.Join(", ", list1.Where(n => (n > 3 && n < 8))));
+            //Console.WriteLine("Even Numbers : " + string.Join(", ", list1.Where(n => n % 2 == 0)));     
+
+
             //looping through lists 
-            foreach (int i in list1)
-                Console.Write(i + " ");
+            /* foreach (int i in list1)
+                 Console.Write(i + " ");*/
 
             Console.WriteLine();
 
-            //using lambda expression
-            list1.ForEach(number=>  Console.Write(number + " "));
+           
+
+
+
+
 
             /*Console.WriteLine("list : " + string.Join(" ", list1));
 
