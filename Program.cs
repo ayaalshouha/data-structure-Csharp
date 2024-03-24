@@ -23,7 +23,7 @@ namespace Datastructure_C_
             Console.WriteLine("Odd Numbers : " + string.Join(", ", list1.Where(n => n % 2 != 0)));
             Console.WriteLine("Numbers Greater Than 5 : " + string.Join(", ", list1.Where(n => n > 5)));
             Console.WriteLine("Numbers Between 3 and 8 : " + string.Join(", ", list1.Where(n => (n > 3 && n < 8))));
-            //Console.WriteLine("Even Numbers : " + string.Join(", ", list1.Where(n => n % 2 == 0)));     
+            Console.WriteLine("Every Second Number : " + string.Join(", ", list1.Where((n,index) => index % 2 == 1)));     
 
 
             //looping through lists 
