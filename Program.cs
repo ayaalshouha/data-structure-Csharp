@@ -11,7 +11,7 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
-
+        
             //Lists using C# 
             List<int> list1 = new List<int>() { 11, -20, 300, -450, 55, 610, -7, 358, 90, 3 };
 
@@ -22,6 +22,7 @@ namespace Datastructure_C_
             //sorting a list
             list1.Sort();
             Console.WriteLine(string.Join(", ", list1));
+
             list1.Reverse();
             Console.WriteLine(string.Join(", ", list1)); 
 
@@ -37,23 +38,16 @@ namespace Datastructure_C_
 
 
 
+            //filtering a list using LINQ
             /* Console.WriteLine("Even Numbers : " + string.Join(", ", list1.Where(n => n % 2 == 0)));
              Console.WriteLine("Odd Numbers : " + string.Join(", ", list1.Where(n => n % 2 != 0)));
              Console.WriteLine("Numbers Greater Than 5 : " + string.Join(", ", list1.Where(n => n > 5)));
              Console.WriteLine("Numbers Between 3 and 8 : " + string.Join(", ", list1.Where(n => (n > 3 && n < 8))));
              Console.WriteLine("Every Second Number : " + string.Join(", ", list1.Where((n,index) => index % 2 == 1)));     */
 
-
             //looping through lists 
             /* foreach (int i in list1)
                  Console.Write(i + " ");*/
-
-            Console.WriteLine();
-
-           
-
-
-
 
 
             /*Console.WriteLine("list : " + string.Join(" ", list1));
