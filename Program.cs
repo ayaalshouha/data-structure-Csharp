@@ -21,6 +21,8 @@ namespace Datastructure_C_
             Console.WriteLine();
             Console.WriteLine();
 
+            //using FindAll
+            Console.WriteLine("return all positive elements : " + string.Join(", ", list1.FindAll(n => n > 0)));
 
             //using Find 
             Console.WriteLine("return first positive element : " + list1.Find(n => n > 0));
