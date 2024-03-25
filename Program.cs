@@ -21,6 +21,9 @@ namespace Datastructure_C_
             Console.WriteLine();
             Console.WriteLine();
 
+            //using Any
+            Console.WriteLine("if there is any number greater than 100 : " + list1.Any(n => n > 100));
+
             //using FindAll
             Console.WriteLine("return all positive elements : " + string.Join(", ", list1.FindAll(n => n > 0)));
 
