@@ -21,6 +21,10 @@ namespace Datastructure_C_
             Console.WriteLine();
             Console.WriteLine();
 
+
+            //using Find 
+            Console.WriteLine("return first positive element : " + list1.Find(n => n > 0));
+
             //using Contains 
             Console.WriteLine("if List Contains number 9 : " + list1.Contains(9));
 
