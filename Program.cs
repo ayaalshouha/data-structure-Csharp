@@ -17,25 +17,27 @@ namespace Datastructure_C_
 
             //using lambda expression
             list1.ForEach(number => Console.Write(number + " "));
+
+            Console.WriteLine();
             Console.WriteLine();
 
+            //using Contains 
+            Console.WriteLine("If List Contains number 9 : " + list1.Contains(9));
+
+
+
+
+
             //sorting a list
-            list1.Sort();
+            /*list1.Sort();
             Console.WriteLine(string.Join(", ", list1));
 
             list1.Reverse();
-            Console.WriteLine(string.Join(", ", list1)); 
+            Console.WriteLine(string.Join(", ", list1)); */
 
             //sorting a list using LINQ 
-            Console.WriteLine(string.Join(", ", list1.OrderBy(n=>n)));
-            Console.WriteLine(string.Join(", ", list1.OrderByDescending(n => n)));
-
-
-
-
-
-
-
+          /*  Console.WriteLine(string.Join(", ", list1.OrderBy(n=>n)));
+            Console.WriteLine(string.Join(", ", list1.OrderByDescending(n => n)));*/
 
 
             //filtering a list using LINQ
