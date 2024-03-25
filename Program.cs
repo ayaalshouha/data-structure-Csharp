@@ -22,9 +22,10 @@ namespace Datastructure_C_
             Console.WriteLine();
 
             //using Contains 
-            Console.WriteLine("If List Contains number 9 : " + list1.Contains(9));
+            Console.WriteLine("if List Contains number 9 : " + list1.Contains(9));
 
-
+            //using Exists 
+            Console.WriteLine("if any negative number exists : " + list1.Exists(n => n < 0));
 
 
 
