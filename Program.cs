@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -11,32 +12,62 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
-        
+
+            //HashTable in C# 
+
+            Hashtable hashtable1 = new Hashtable();
+            hashtable1.Add("key1", "value1");
+            hashtable1.Add("key2", "value2");
+            hashtable1.Add("key3", "value3");
+            hashtable1.Add("key4", "value4");
+
+            foreach (DictionaryEntry enrty in hashtable1)
+            {
+                Console.WriteLine(enrty.Key + " / " + enrty.Value);
+            }
+
+            /*int[] arraynumbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            List<int> list = new List<int>(arraynumbers);
+            Console.WriteLine( "Elements that initialized from array in list : " + string.Join(", " , list)); 
+*/
             //Lists using C# 
-            List<int> list1 = new List<int>() { 11, -20, 300, -450, 55, 610, -7, 358, 90, 3 };
+            //List<int> list1 = new List<int>() { 11, -20, 300, -450, 55, 610, -7, 358, 90, 3 };
+            //List<string> fruits = new List<string>() { "apple", "banana", "strewberry", "pineapple", "watermelon", "blueberry"};
 
             //using lambda expression
-            list1.ForEach(number => Console.Write(number + " "));
+            //list1.ForEach(number => Console.Write(number + " "));
+
+            //using lambda expression
+
+            //fruits.ForEach(element => Console.Write(element + "  "));
 
             Console.WriteLine();
             Console.WriteLine();
-
-            //using Any
-            Console.WriteLine("if there is any number greater than 100 : " + list1.Any(n => n > 100));
-
-            //using FindAll
-            Console.WriteLine("return all positive elements : " + string.Join(", ", list1.FindAll(n => n > 0)));
-
-            //using Find 
-            Console.WriteLine("return first positive element : " + list1.Find(n => n > 0));
 
             //using Contains 
-            Console.WriteLine("if List Contains number 9 : " + list1.Contains(9));
+            //Console.WriteLine("if fruits contains apple : " + fruits.Contains("apple"));
 
             //using Exists 
-            Console.WriteLine("if any negative number exists : " + list1.Exists(n => n < 0));
+            //Console.WriteLine("if >= 5 letters fruit exists : " + fruits.Exists(f => f.Length >= 5));
 
+            //using FindAll
+            //Console.WriteLine("return all >= 5 letters fruits : " + string.Join(", " , fruits.FindAll(f => f.Length >= 5)));
 
+            //using Any
+            //Console.WriteLine("if there is any number greater than 100 : " + list1.Any(n => n > 100));
+
+            //using FindAll
+            //Console.WriteLine("return all positive elements : " + string.Join(", ", list1.FindAll(n => n > 0)));
+
+            //using Find 
+            //Console.WriteLine("return first positive element : " + list1.Find(n => n > 0));
+
+            //using Contains 
+            //Console.WriteLine("if List Contains number 9 : " + list1.Contains(9));
+
+            //using Exists 
+            //Console.WriteLine("if any negative number exists : " + list1.Exists(n => n < 0));
 
             //sorting a list
             /*list1.Sort();
@@ -46,9 +77,8 @@ namespace Datastructure_C_
             Console.WriteLine(string.Join(", ", list1)); */
 
             //sorting a list using LINQ 
-          /*  Console.WriteLine(string.Join(", ", list1.OrderBy(n=>n)));
-            Console.WriteLine(string.Join(", ", list1.OrderByDescending(n => n)));*/
-
+            /*  Console.WriteLine(string.Join(", ", list1.OrderBy(n=>n)));
+              Console.WriteLine(string.Join(", ", list1.OrderByDescending(n => n)));*/
 
             //filtering a list using LINQ
             /* Console.WriteLine("Even Numbers : " + string.Join(", ", list1.Where(n => n % 2 == 0)));
@@ -60,7 +90,6 @@ namespace Datastructure_C_
             //looping through lists 
             /* foreach (int i in list1)
                  Console.Write(i + " ");*/
-
 
             /*Console.WriteLine("list : " + string.Join(" ", list1));
 
