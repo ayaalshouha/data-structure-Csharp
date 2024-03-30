@@ -12,10 +12,21 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
+            //Dectionary in C#
+            Dictionary<string, int> PersonAge = new Dictionary<string, int>();
+            PersonAge.Add("Ahmad", 45);
+            PersonAge.Add("Mohammad", 55);
+            PersonAge.Add("Ali", 56);
+            PersonAge.Add("Sami", 76);
+
+            foreach(KeyValuePair<string, int> pair  in PersonAge)
+            {
+                Console.WriteLine(pair.Key + "'s age is " + pair.Value);
+            }
 
             //HashTable in C# 
 
-            Hashtable hashtable1 = new Hashtable();
+           /* Hashtable hashtable1 = new Hashtable();
             hashtable1.Add("key1", "value1");
             hashtable1.Add("key2", "value2");
             hashtable1.Add("key3", "value3");
@@ -24,7 +35,7 @@ namespace Datastructure_C_
             foreach (DictionaryEntry enrty in hashtable1)
             {
                 Console.WriteLine(enrty.Key + " / " + enrty.Value);
-            }
+            }*/
 
             /*int[] arraynumbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
