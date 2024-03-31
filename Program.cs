@@ -23,13 +23,20 @@ namespace Datastructure_C_
                 { "Sami", 76}
             };
 
-            //filtering using LINQ 
-            var person_age_pair = PersonAge.Where(pa => pa.Value >= 55); 
-
+            //sorting using LINQ 
+            var person_age_pair = PersonAge.Select(x => new {x.Key, x.Value});
             foreach(var item in  person_age_pair)
             {
                 Console.WriteLine("person " + item.Key + "'s age is " + item.Value);
             }
+
+            //filtering using LINQ 
+            /*var person_age_pair = PersonAge.Where(pa => pa.Value >= 55); 
+
+            foreach(var item in  person_age_pair)
+            {
+                Console.WriteLine("person " + item.Key + "'s age is " + item.Value);
+            }*/
 
            /* if(PersonAge.TryGetValue("Aya", out int returnedvalue))
                 Console.WriteLine("the returned value is " + returnedvalue.ToString());
