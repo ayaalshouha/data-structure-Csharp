@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
@@ -22,10 +23,18 @@ namespace Datastructure_C_
                 { "Sami", 76}
             };
 
-            if(PersonAge.TryGetValue("Aya", out int returnedvalue))
+            //filtering using LINQ 
+            var person_age_pair = PersonAge.Where(pa => pa.Value >= 55); 
+
+            foreach(var item in  person_age_pair)
+            {
+                Console.WriteLine("person " + item.Key + "'s age is " + item.Value);
+            }
+
+           /* if(PersonAge.TryGetValue("Aya", out int returnedvalue))
                 Console.WriteLine("the returned value is " + returnedvalue.ToString());
             else
-                Console.WriteLine("no value returned");
+                Console.WriteLine("no value returned");*/
 
             /*foreach (KeyValuePair<string, int> pair  in PersonAge)
             {
