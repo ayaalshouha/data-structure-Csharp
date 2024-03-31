@@ -15,20 +15,44 @@ namespace Datastructure_C_
         static void Main(string[] args)
         {
             //Dictionary in C#
-            Dictionary<string, int> PersonAge = new Dictionary<string, int>()
+
+            Dictionary<string, string> fruitsBasket = new Dictionary<string, string>()
+            {
+                {"apple", "tree" },
+                {"cherry", "tree" },
+                {"banana", "herb" },
+                {"strawberry", "bush" },
+                {"blackberry", "bush" },
+            };
+
+            var groupfruits = fruitsBasket.GroupBy(x => x.Value);
+
+            foreach (var group in groupfruits)
+            {
+                Console.WriteLine($"Category: {group.Key}");
+
+                foreach(var item in group)
+                {
+                    Console.WriteLine($" - {item.Key}"); 
+                }
+                Console.WriteLine();
+            }
+
+
+            /*Dictionary<string, int> PersonAge = new Dictionary<string, int>()
             {
                 { "Ahmad", 45},
                 { "Mohammad", 55},
                 { "Ali", 56 },
                 { "Sami", 76}
             };
-
+*/
             //sorting using LINQ 
-            var person_age_pair = PersonAge.Select(x => new {x.Key, x.Value});
+            /*var person_age_pair = PersonAge.Select(x => new {x.Key, x.Value});
             foreach(var item in  person_age_pair)
             {
                 Console.WriteLine("person " + item.Key + "'s age is " + item.Value);
-            }
+            }*/
 
             //filtering using LINQ 
             /*var person_age_pair = PersonAge.Where(pa => pa.Value >= 55); 
@@ -38,10 +62,10 @@ namespace Datastructure_C_
                 Console.WriteLine("person " + item.Key + "'s age is " + item.Value);
             }*/
 
-           /* if(PersonAge.TryGetValue("Aya", out int returnedvalue))
-                Console.WriteLine("the returned value is " + returnedvalue.ToString());
-            else
-                Console.WriteLine("no value returned");*/
+            /* if(PersonAge.TryGetValue("Aya", out int returnedvalue))
+                 Console.WriteLine("the returned value is " + returnedvalue.ToString());
+             else
+                 Console.WriteLine("no value returned");*/
 
             /*foreach (KeyValuePair<string, int> pair  in PersonAge)
             {
@@ -50,16 +74,16 @@ namespace Datastructure_C_
 
             //HashTable in C# 
 
-           /* Hashtable hashtable1 = new Hashtable();
-            hashtable1.Add("key1", "value1");
-            hashtable1.Add("key2", "value2");
-            hashtable1.Add("key3", "value3");
-            hashtable1.Add("key4", "value4");
+            /* Hashtable hashtable1 = new Hashtable();
+             hashtable1.Add("key1", "value1");
+             hashtable1.Add("key2", "value2");
+             hashtable1.Add("key3", "value3");
+             hashtable1.Add("key4", "value4");
 
-            foreach (DictionaryEntry enrty in hashtable1)
-            {
-                Console.WriteLine(enrty.Key + " / " + enrty.Value);
-            }*/
+             foreach (DictionaryEntry enrty in hashtable1)
+             {
+                 Console.WriteLine(enrty.Key + " / " + enrty.Value);
+             }*/
 
             /*int[] arraynumbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
