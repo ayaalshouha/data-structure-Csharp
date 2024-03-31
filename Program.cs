@@ -14,9 +14,21 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
-            //Dictionary in C#
+            //HashSet in C# 
+            HashSet<int> hashset1 = new HashSet<int>() { 
+                1, 
+                2,
+                4,5,3
+            };
 
-            Dictionary<string, string> fruitsBasket = new Dictionary<string, string>()
+            foreach(int i in hashset1) {
+                Console.WriteLine(i);
+            }
+
+
+
+            //Dictionary in C#
+            /*Dictionary<string, string> fruitsBasket = new Dictionary<string, string>()
             {
                 {"apple", "tree" },
                 {"cherry", "tree" },
@@ -36,7 +48,7 @@ namespace Datastructure_C_
                     Console.WriteLine($" - {item.Key}"); 
                 }
                 Console.WriteLine();
-            }
+            }*/
 
 
             /*Dictionary<string, int> PersonAge = new Dictionary<string, int>()
