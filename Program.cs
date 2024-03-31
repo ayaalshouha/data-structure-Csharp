@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,17 +13,24 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
-            //Dectionary in C#
-            Dictionary<string, int> PersonAge = new Dictionary<string, int>();
-            PersonAge.Add("Ahmad", 45);
-            PersonAge.Add("Mohammad", 55);
-            PersonAge.Add("Ali", 56);
-            PersonAge.Add("Sami", 76);
+            //Dictionary in C#
+            Dictionary<string, int> PersonAge = new Dictionary<string, int>()
+            {
+                { "Ahmad", 45},
+                { "Mohammad", 55},
+                { "Ali", 56 },
+                { "Sami", 76}
+            };
 
-            foreach(KeyValuePair<string, int> pair  in PersonAge)
+            if(PersonAge.TryGetValue("Aya", out int returnedvalue))
+                Console.WriteLine("the returned value is " + returnedvalue.ToString());
+            else
+                Console.WriteLine("no value returned");
+
+            /*foreach (KeyValuePair<string, int> pair  in PersonAge)
             {
                 Console.WriteLine(pair.Key + "'s age is " + pair.Value);
-            }
+            }*/
 
             //HashTable in C# 
 
