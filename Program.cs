@@ -14,17 +14,40 @@ namespace Datastructure_C_
     {
         static void Main(string[] args)
         {
-            //HashSet in C# 
-            HashSet<int> hashset1 = new HashSet<int>() { 
-                1, 
-                2,
-                4,5,3
-            };
 
-            foreach(int i in hashset1) {
-                Console.WriteLine(i);
+            //HashSet in C#
+            HashSet<int> set1 = new HashSet<int>() {1,1,2,3 };
+            HashSet<int> set2 = new HashSet<int> { 4,4,5,6};
+
+            set1.UnionWith(set2);
+
+            foreach (int i in set1)
+            {
+                Console.Write(i + " ");
             }
 
+            /*int[] numbers = new int[] { 
+                1,2,2,3,3,3,4,5,6,7,8,9,0,0,10,1,4,5,6,7,8,
+            };
+
+            for(int i =0; i< numbers.Length; i++)
+            {
+                Console.Write(numbers[i]+ " ");
+            }
+         
+            Console.WriteLine();
+            Console.WriteLine();
+
+            HashSet<int> hashset1 = new HashSet<int>(numbers);*/
+
+            /* foreach(int i in numbers){
+                 hashset1.Add(i);
+             }*/
+
+           /* foreach (int i in hashset1) {
+                Console.Write(i + " ");
+            }
+            */
 
 
             //Dictionary in C#
