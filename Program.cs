@@ -16,10 +16,10 @@ namespace Datastructure_C_
         {
 
             //HashSet in C#
-            HashSet<int> set1 = new HashSet<int>() {1,1,2,3 ,4,5};
-            HashSet<int> set2 = new HashSet<int> { 4,4,5,6,1};
+            HashSet<int> set1 = new HashSet<int>() { 1, 1, 2, 3, 4, 5 };
+            HashSet<int> set2 = new HashSet<int> { 4, 4, 5, 6, 1 };
 
-            set1.IntersectWith(set2);
+            set1.ExceptWith(set2);
 
             foreach (int i in set1)
             {
