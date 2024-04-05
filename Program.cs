@@ -19,7 +19,7 @@ namespace Datastructure_C_
             HashSet<int> set1 = new HashSet<int>() { 1, 1, 2, 3, 4, 5 };
             HashSet<int> set2 = new HashSet<int> { 4, 4, 5, 6, 1 };
 
-            Console.WriteLine("set1 = set2 ? " + set1.SetEquals(set2));
+            Console.WriteLine("set2 sub set of set1 ? " + set2.IsSubsetOf(set1));
 
            /* foreach (int i in set1)
             {
