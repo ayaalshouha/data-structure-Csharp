@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
@@ -19,12 +20,27 @@ namespace Datastructure_C_
             SortedList<string, int> sortedlist1 = new SortedList<string, int>()
             {
                 {"apple", 12 },
+                {"grape", 13 },
+                {"date", 23 },
+                {"elderberry", 3 },
                 {"banana", 20 },
-                {"strawberry",10 },
-                {"blueberry",23 }
+                {"strawberry",11 },
+                {"blueberry",29 }
             };
 
-            Console.WriteLine("Does sortedList has apple? " + sortedlist1.ContainsKey("apple")); 
+            var groups = sortedlist1.GroupBy(x => x.Key.Length);
+
+            foreach (var group in groups)
+            {
+                Console.WriteLine($"Length {group.Key} : {string.Join(", " , group.Select(x => x.Key))}");
+            }
+
+
+            /*var NewList = from pair in sortedlist1
+                         where pair.Value > 15
+                         select pair;*/
+
+            //Console.WriteLine("Does sortedList has apple? " + sortedlist1.ContainsKey("apple")); 
 
 
             /*//HashSet in C#
@@ -33,10 +49,10 @@ namespace Datastructure_C_
 
             Console.WriteLine("does set1 overlabs set2 ? " + set1.Overlaps(set2));*/
 
-           /* foreach (int i in set1)
-            {
-                Console.Write(i + " ");
-            }*/
+            /* foreach (int i in set1)
+             {
+                 Console.Write(i + " ");
+             }*/
 
             /*int[] numbers = new int[] { 
                 1,2,2,3,3,3,4,5,6,7,8,9,0,0,10,1,4,5,6,7,8,
@@ -56,10 +72,10 @@ namespace Datastructure_C_
                  hashset1.Add(i);
              }*/
 
-           /* foreach (int i in hashset1) {
-                Console.Write(i + " ");
-            }
-            */
+            /* foreach (int i in hashset1) {
+                 Console.Write(i + " ");
+             }
+             */
 
 
             //Dictionary in C#
