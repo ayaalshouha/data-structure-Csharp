@@ -19,12 +19,12 @@ namespace Datastructure_C_
             HashSet<int> set1 = new HashSet<int>() { 1, 1, 2, 3, 4, 5 };
             HashSet<int> set2 = new HashSet<int> { 4, 4, 5, 6, 1 };
 
-            set1.ExceptWith(set2);
+            Console.WriteLine("set1 = set2 ? " + set1.SetEquals(set2));
 
-            foreach (int i in set1)
+           /* foreach (int i in set1)
             {
                 Console.Write(i + " ");
-            }
+            }*/
 
             /*int[] numbers = new int[] { 
                 1,2,2,3,3,3,4,5,6,7,8,9,0,0,10,1,4,5,6,7,8,
