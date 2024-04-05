@@ -15,11 +15,23 @@ namespace Datastructure_C_
         static void Main(string[] args)
         {
 
-            //HashSet in C#
+            //SortedList
+            SortedList<string, int> sortedlist1 = new SortedList<string, int>()
+            {
+                {"apple", 12 },
+                {"banana", 20 },
+                {"strawberry",10 },
+                {"blueberry",23 }
+            };
+
+            Console.WriteLine("Does sortedList has apple? " + sortedlist1.ContainsKey("apple")); 
+
+
+            /*//HashSet in C#
             HashSet<int> set1 = new HashSet<int>() { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             HashSet<int> set2 = new HashSet<int> { 1, 2, 3, 4, 1 };
 
-            Console.WriteLine("does set1 overlabs set2 ? " + set1.Overlaps(set2));
+            Console.WriteLine("does set1 overlabs set2 ? " + set1.Overlaps(set2));*/
 
            /* foreach (int i in set1)
             {
