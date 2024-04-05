@@ -19,7 +19,7 @@ namespace Datastructure_C_
             HashSet<int> set1 = new HashSet<int>() { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             HashSet<int> set2 = new HashSet<int> { 1, 2, 3, 4, 1 };
 
-            Console.WriteLine("set1 super set of set2 ? " + set1.IsSupersetOf(set2));
+            Console.WriteLine("does set1 overlabs set2 ? " + set1.Overlaps(set2));
 
            /* foreach (int i in set1)
             {
