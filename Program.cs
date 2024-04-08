@@ -5,7 +5,9 @@ using System.Collections.Specialized;
 using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Channels;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,27 +15,49 @@ namespace Datastructure_C_
 {
     internal class Program
     {
+        public class Employee
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public string Department { get; set; }
+
+            public Employee(int ID, string name , string department) 
+            { 
+                this.ID = ID;
+                this.Name = name;
+                this.Department = department;
+            }
+        }
         static void Main(string[] args)
         {
-
             //SortedList
-            SortedList<string, int> sortedlist1 = new SortedList<string, int>()
+            SortedList<int, Employee> sortedlist1 = new SortedList<int, Employee>()
             {
-                {"apple", 12 },
-                {"grape", 13 },
-                {"date", 23 },
-                {"elderberry", 3 },
-                {"banana", 20 },
-                {"strawberry",11 },
-                {"blueberry",29 }
+                {1, new Employee(101, "Ahmad", "IT") },
+                {2, new Employee(303, "Alia", "HR") },
+                {3, new Employee(104, "Ali", "FINANCE") },
+                {4, new Employee(105, "Sami", "DEVELOPMENT") },
+                {5, new Employee(206, "Mohammad", "BUISNESS") },
+                {6, new Employee(307, "Abdulla", "HR") },
+                {7, new Employee(509, "Aisha", "SALES") }
             };
 
-            var groups = sortedlist1.GroupBy(x => x.Key.Length);
+            var filteredList = sortedlist1.Where(x => x.Value.Department == "HR")
+                .OrderByDescending(x => x.Value.ID)
+                .Select(x => x.Value.Name);
 
+
+            foreach(var name in filteredList)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            /*var groups = sortedlist1.GroupBy(x => x.Key.Length);
             foreach (var group in groups)
             {
                 Console.WriteLine($"Length {group.Key} : {string.Join(", " , group.Select(x => x.Key))}");
-            }
+            }*/
 
 
             /*var NewList = from pair in sortedlist1
