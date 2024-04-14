@@ -30,8 +30,20 @@ namespace Datastructure_C_
         }
         static void Main(string[] args)
         {
+            //ArrayList
+             ArrayList list = new ArrayList();
+            list.Add(10); 
+            list.Add(20);
+            list.Add(30);
+            list.Add(40); 
 
-            SortedDictionary<string, int> fruits = new SortedDictionary<string, int>
+            foreach(int i in list)
+            {
+                Console.WriteLine (i);
+
+            }
+
+          /*  SortedDictionary<string, int> fruits = new SortedDictionary<string, int>
             {
                 { "apple",10  },
                 {"banana", 12 },
@@ -42,7 +54,7 @@ namespace Datastructure_C_
             foreach (KeyValuePair<string, int> pair in fruits)
             {
                 Console.WriteLine($"The {pair.Key} count is {pair.Value}. "); 
-            }
+            }*/
 
 
             //SortedSet 
