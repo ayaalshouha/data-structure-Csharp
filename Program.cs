@@ -30,8 +30,36 @@ namespace Datastructure_C_
         }
         static void Main(string[] args)
         {
+
+            SortedDictionary<string, int> fruits = new SortedDictionary<string, int>
+            {
+                { "apple",10  },
+                {"banana", 12 },
+                {"strawberr", 15 },
+                {"cocumbers",20  }  
+            };
+
+            foreach (KeyValuePair<string, int> pair in fruits)
+            {
+                Console.WriteLine($"The {pair.Key} count is {pair.Value}. "); 
+            }
+
+
+            //SortedSet 
+           /* SortedSet<string> fruits = new SortedSet<string>() { 
+                "apple", 
+                "banana",
+                "strawberry",
+                "blueberry",
+                "tomato", 
+                "potato"
+            };*/
+            
+            
+            //Console.WriteLine("Count = " + fruits.Count()); 
+
             //SortedList
-            SortedList<int, Employee> sortedlist1 = new SortedList<int, Employee>()
+            /*SortedList<int, Employee> sortedlist1 = new SortedList<int, Employee>()
             {
                 {1, new Employee(101, "Ahmad", "IT") },
                 {2, new Employee(303, "Alia", "HR") },
@@ -44,13 +72,13 @@ namespace Datastructure_C_
 
             var filteredList = sortedlist1.Where(x => x.Value.Department == "HR")
                 .OrderByDescending(x => x.Value.ID)
-                .Select(x => x.Value.Name);
+                .Select(x => x.Value);
 
 
-            foreach(var name in filteredList)
+            foreach(var item in filteredList)
             {
-                Console.WriteLine(name);
-            }
+                Console.WriteLine(item.Name);
+            }*/
 
 
             /*var groups = sortedlist1.GroupBy(x => x.Key.Length);
